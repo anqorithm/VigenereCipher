@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	alphabet = "ABCDEFGHIJKLMNOPKRSTUVWXYZabcdefghijklmnopkrstuvwxyz0123456789 !?.,"
+	alphabet = "ABCDEFGHIJKLMNOPKRSTUVWXYZabcdefghijklmnopkrstuvwxyz0123456789 ?!:;.,-_<>*'|=+{}()[]&#@/%\\"
 )
 
 func encrypt(originalMsg, key string) string {

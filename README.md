@@ -37,7 +37,7 @@ $ go build . && ./VigenereCipher -o YourOutputFile.txt
 ```go
 const (
     // YOU CAN CHANGE THIS FOR ANYTHING YOU WANT
-	alphabet = "ABCDEFGHIJKLMNOPKRSTUVWXYZabcdefghijklmnopkrstuvwxyz0123456789 !?.,"
+	alphabet = "ABCDEFGHIJKLMNOPKRSTUVWXYZabcdefghijklmnopkrstuvwxyz0123456789 ?!:;.,-_<>*'|=+{}()[]&#@/%\"
 )
 ```
 
@@ -51,7 +51,7 @@ $ go build . && ./VigenereCipher -p e
 
 ```
 encryption process:
-Hello World! (input.txt) -> (encryption) -> r8UGDt6DaG7u (output.txt)
+Hello World! (input.txt) -> (encryption) -> r8/*_W6_D*7Y (output.txt)
 ```
 
 ```bash
@@ -60,5 +60,5 @@ $ go build . && ./VigenereCipher -p d
 
 ```
 decryption process:
-r8UGDt6DaG7u (input.txt) -> (decryption) -> Hello World! (output.txt)
+r8/*_W6_D*7Y (input.txt) -> (decryption) -> Hello World! (output.txt)
 ```
