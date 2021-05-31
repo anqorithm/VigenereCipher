@@ -20,7 +20,7 @@ $ go build . && ./VigenereCipher -p e
 $ go build . && ./VigenereCipher -p d
 ```
 
-## k parameter ("KEY" as default)
+## k parameter ("key" as default)
 
 ```bash
 $ go build . && ./VigenereCipher -k YourEncryptionKey
