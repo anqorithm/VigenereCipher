@@ -26,7 +26,7 @@ $ go build . && ./VigenereCipher -p d
 $ go build . && ./VigenereCipher -k YourEncryptionKey
 ```
 
-## provided alphabit
+## provided alphabet
 
 ```go
 const (
