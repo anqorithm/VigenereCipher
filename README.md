@@ -44,6 +44,7 @@ const (
 # Example of usage
 
 ```
-Hello World! -> (encryption) -> Ri9vsTgsAvhU
-Ri9vsTgsAvhU -> (decryption) -> Hello World!
+encryption key = "key"
+Hello World! (input.txt) -> (encryption) -> r8UGDt6DaG7u (output.txt)
+r8UGDt6DaG7u (input.txt) -> (decryption) -> Hello World! (output.txt)
 ```
