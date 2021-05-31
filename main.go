@@ -47,9 +47,9 @@ func readTheOriginalData(filePath string) string {
 
 func main() {
 	var (
-		i = flag.String("INPUT", "input.txt", "a TXT file contains the original message")
-		p = flag.String("process", "e", "an opreation for the provided file 'e' for encrypt, 'd' for decrypt")
-		k = flag.String("key", "KEY", "a encryption key")
+		i = flag.String("i", "input.txt", "a TXT file contains the original message")
+		p = flag.String("p", "e", "an opreation for the provided file 'e' for encrypt, 'd' for decrypt")
+		k = flag.String("k", "KEY", "a encryption key")
 	)
 	flag.Parse()
 	originalData := readTheOriginalData(*i)
