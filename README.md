@@ -30,7 +30,7 @@ $ go build . && ./VigenereCipher -k YourEncryptionKey
 
 ```go
 const (
-    // YOU CAN CHANGE FOR ANYTHING YOU WANT
+    // YOU CAN CHANGE THIS FOR ANYTHING YOU WANT
 	alphabet = "ABCDEFGHIJKLMNOPKRSTUVWXYZabcdefghijklmnopkrstuvwxyz0123456789 !?.,"
 )
 ```
