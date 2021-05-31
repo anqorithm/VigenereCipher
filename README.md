@@ -26,6 +26,15 @@ $ go build . && ./VigenereCipher -p d
 $ go build . && ./VigenereCipher -k YourEncryptionKey
 ```
 
+## provided alphabit
+
+```go
+const (
+    // YOU CAN CHANGE FOR ANYTHING YOU WANT
+	alphabet = "ABCDEFGHIJKLMNOPKRSTUVWXYZabcdefghijklmnopkrstuvwxyz0123456789 !?.,"
+)
+```
+
 # Example of usage
 
 ```
