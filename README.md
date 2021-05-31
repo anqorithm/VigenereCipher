@@ -1,12 +1,12 @@
 # Usage
 
-## i pramaeter ("input.txt" as defult)
+## i pramaeter ("input.txt" as default)
 
 ```
 $ go build . && ./VigenereCipher -i YourFile.txt
 ```
 
-## p parameter ("e" as defult)
+## p parameter ("e" as default)
 
 ### 1- encryption
 
@@ -20,7 +20,7 @@ $ go build . && ./VigenereCipher -p e
 $ go build . && ./VigenereCipher -p d
 ```
 
-## k parameter ("KEY" as defult)
+## k parameter ("KEY" as default)
 
 ```bash
 $ go build . && ./VigenereCipher -k YourEncryptionKey
