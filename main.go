@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 	"strings"
 )
 
@@ -37,7 +38,7 @@ func decrypt(encryptedMsg, key string) string {
 	return res
 }
 
-func readTheOriginalData(filePath string) string {
+func redFromFile(filePath string) string {
 	result, err := ioutil.ReadFile(filePath)
 	if err != nil {
 		log.Fatal(err)
@@ -45,20 +46,38 @@ func readTheOriginalData(filePath string) string {
 	return string(result)
 }
 
+func writeToFile(filePath, data string) {
+	file, err0 := os.Create(filePath)
+	if err0 != nil {
+		log.Fatal(err0)
+	}
+	defer file.Close()
+	_, err1 := file.WriteString(data)
+	if err1 != nil {
+		log.Fatal(err1)
+	}
+	fmt.Println("Done successfully!.")
+}
+
 func main() {
 	var (
 		i = flag.String("i", "input.txt", "a TXT file contains the original message")
 		p = flag.String("p", "e", "an opreation for the provided file 'e' for encrypt, 'd' for decrypt")
-		k = flag.String("k", "KEY", "a encryption key")
+		k = flag.String("k", "key", "a encryption key")
+		o = flag.String("o", "output.txt", "a TXT file contains the result for the provided process")
 	)
 	flag.Parse()
-	originalData := readTheOriginalData(*i)
+	originalData := redFromFile(*i)
 	switch *p {
 	case "e":
 		res := encrypt(originalData, *k)
-		fmt.Println(res)
+		if o != nil {
+			writeToFile(*o, res)
+		}
 	case "d":
 		res := decrypt(originalData, *k)
-		fmt.Println(res)
+		if o != nil {
+			writeToFile(*o, res)
+		}
 	}
 }

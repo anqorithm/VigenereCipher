@@ -26,6 +26,12 @@ $ go build . && ./VigenereCipher -p d
 $ go build . && ./VigenereCipher -k YourEncryptionKey
 ```
 
+## o pramater ("output.txt" as default)
+
+```bash
+$ go build . && ./VigenereCipher -o YourOutputFile
+```
+
 ## provided alphabet
 
 ```go
