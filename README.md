@@ -43,8 +43,22 @@ const (
 
 # Example of usage
 
-```
 encryption key = "key"
+
+```bash
+$ go build . && ./VigenereCipher -p e
+```
+
+```
+encryption process:
 Hello World! (input.txt) -> (encryption) -> r8UGDt6DaG7u (output.txt)
+```
+
+```bash
+$ go build . && ./VigenereCipher -p d
+```
+
+```
+decryption process:
 r8UGDt6DaG7u (input.txt) -> (decryption) -> Hello World! (output.txt)
 ```
