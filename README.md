@@ -25,3 +25,10 @@ $ go build . && ./VigenereCipher -p d
 ```bash
 $ go build . && ./VigenereCipher -k YourEncryptionKey
 ```
+
+# Example of usage
+
+```
+Hello World! -> (encryption) -> Ri9vsTgsAvhU
+Ri9vsTgsAvhU -> (decryption) -> Hello World!
+```
