@@ -47,18 +47,18 @@ func readTheOriginalData(filePath string) string {
 
 func main() {
 	var (
-		inputFile = flag.String("inputFile", "input.txt", "a TXT file contains the original message")
-		process   = flag.String("process", "e", "an opreation for the provided file 'e' for encrypt, 'd' for decrypt")
-		key       = flag.String("key", "RED", "a encryption key")
+		i = flag.String("INPUT", "input.txt", "a TXT file contains the original message")
+		p = flag.String("process", "e", "an opreation for the provided file 'e' for encrypt, 'd' for decrypt")
+		k = flag.String("key", "KEY", "a encryption key")
 	)
 	flag.Parse()
-	originalData := readTheOriginalData(*inputFile)
-	switch *process {
+	originalData := readTheOriginalData(*i)
+	switch *p {
 	case "e":
-		res := encrypt(originalData, *key)
+		res := encrypt(originalData, *k)
 		fmt.Println(res)
 	case "d":
-		res := decrypt(originalData, *key)
+		res := decrypt(originalData, *k)
 		fmt.Println(res)
 	}
 }
