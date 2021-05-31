@@ -3,7 +3,7 @@
 ## i pramaeter ("input.txt" as default)
 
 ```
-$ go build . && ./VigenereCipher -i YourFile.txt
+$ go build . && ./VigenereCipher -i YourInputFile.txt
 ```
 
 ## p parameter ("e" as default)
@@ -29,7 +29,7 @@ $ go build . && ./VigenereCipher -k YourEncryptionKey
 ## o pramater ("output.txt" as default)
 
 ```bash
-$ go build . && ./VigenereCipher -o YourOutputFile
+$ go build . && ./VigenereCipher -o YourOutputFile.txt
 ```
 
 ## provided alphabet
