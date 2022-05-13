@@ -18,8 +18,8 @@ func encrypt(originalMsg, key string) string {
 	for i := 0; i < len(originalMsg); i++ {
 		msgChar := strings.Index(alphabet, string([]rune(originalMsg)[i]))
 		keyChar := strings.Index(alphabet, string([]rune(key)[i%len(key)]))
-		encryptedChat := (msgChar + keyChar) % len(alphabet)
-		res += string(alphabet[encryptedChat])
+		encryptedChar := (msgChar + keyChar) % len(alphabet)
+		res += string(alphabet[encryptedChar])
 	}
 	return res
 }
@@ -61,23 +61,23 @@ func writeToFile(filePath, data string) {
 
 func main() {
 	var (
-		i = flag.String("i", "input.txt", "a TXT file contains the original message")
-		p = flag.String("p", "e", "an opreation for the provided file 'e' for encrypt, 'd' for decrypt")
-		k = flag.String("k", "key", "a encryption key")
-		o = flag.String("o", "output.txt", "a TXT file contains the result for the provided process")
+		input     = flag.String("i", "input.txt", "a TXT file contains the original message")
+		operation = flag.String("p", "e", "an operation for the provided file 'e' for encrypt, 'd' for decrypt")
+		key       = flag.String("k", "key", "a encryption key")
+		output    = flag.String("o", "output.txt", "a TXT file contains the result for the provided process")
 	)
 	flag.Parse()
-	originalData := redFromFile(*i)
-	switch *p {
+	originalData := redFromFile(*input)
+	switch *operation {
 	case "e":
-		res := encrypt(originalData, *k)
-		if o != nil {
-			writeToFile(*o, res)
+		result := encrypt(originalData, *key)
+		if output != nil {
+			writeToFile(*output, result)
 		}
 	case "d":
-		res := decrypt(originalData, *k)
-		if o != nil {
-			writeToFile(*o, res)
+		result := decrypt(originalData, *key)
+		if output != nil {
+			writeToFile(*output, result)
 		}
 	}
 }
